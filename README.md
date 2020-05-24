@@ -99,7 +99,7 @@
 ### 构建简易的数据源
 | id | username | password |
 | --- | --- | --- |
-| 1 | user | $10$f/hUEUjoW8oGxhsh1gkdHO/NfhKUb7jdQKCNdhlCB.qNKsFFm0Nie |
+| 1 | user | $2a$10$bQsNc11MKGABTj1Ycrxio.nZw4SXsKv/B59mMLm.G3cwpGv.lQrxu |
 
 这个是一个简单的用户表，表中的密码是进过加密后的密码，真实密码为123456。
 
@@ -141,8 +141,8 @@ UserMapper.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.riyeyuedu.springsecurity.mapper.user.UserMapper">
-  <resultMap id="BaseResultMap" type="com.riyeyuedu.springsecurity.entity.user.User">
+<mapper namespace="UserMapper">
+  <resultMap id="BaseResultMap" type="User">
     <!--
       WARNING - @mbg.generated
     -->
@@ -151,14 +151,14 @@ UserMapper.xml
     <result column="password" jdbcType="VARCHAR" property="password" />
   </resultMap>
 
-  <resultMap id="RoleResultMap" type="com.riyeyuedu.springsecurity.entity.user.User">
+  <resultMap id="RoleResultMap" type="User">
     <!--
       WARNING - @mbg.generated
     -->
     <result column="id" jdbcType="INTEGER" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
       <result column="password" jdbcType="VARCHAR" property="password" />
-    <collection property="roles" ofType="com.riyeyuedu.springsecurity.entity.user.Role">
+    <collection property="roles" ofType="Role">
       <id column="role_id" property="id"/>
       <result column="role_role" property="role"/>
     </collection>
