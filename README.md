@@ -2,8 +2,7 @@
 
 ### 序言
 参考一些网上的资料整理出来的东西，有什么好的建议或批评，请务必issue下。<br/>
-项目地址：https://github.com/Neal-yangyi/SpringBoot-SpringSecurity
-
+项目地址：https://github.com/mdynightfire/SpringBoot-SpringSecurity
 ### 准备工作
 在开始本教程之前，请保证已经熟悉以下几点。<br/>
 * Spring Boot 基本语法，至少要懂得Controller、RestController、Autowired等这些基本注释。
